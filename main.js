@@ -4,13 +4,9 @@ var message = "Welcome Back";
 console.log(message);
 var x = 10;
 var y = 20;
-var sum;
 var title = "Codevolution";
 var isBeginner = true;
 var total = 0;
-var name = 'Vishwas';
-var sentence = "My name is " + name + "\nI am a beginner in Typescript";
-console.log(sentence);
 var n = null;
 var u = undefined;
 var isNew = null;
@@ -39,7 +35,7 @@ function hasName(obj) {
 if (hasName(myVariable)) {
     console.log(myVariable.name);
 }
-myVariable.toUpperCase();
+// (myVariable as string).toUpperCase();
 var a;
 a = 10;
 a = true;
@@ -50,3 +46,20 @@ multiType = true;
 var anyType;
 anyType = 20;
 anyType = true;
+function add(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+add(4, 10);
+add(4);
+function fullName(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+var p = {
+    firstName: 'Dimos',
+    lastName: 'Christidis'
+};
+fullName(p);

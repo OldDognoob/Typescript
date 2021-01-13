@@ -5,18 +5,10 @@ console.log(message);
 let x = 10;
 const y = 20;
 
-let sum;
 const title= "Codevolution";
 
 let isBeginner: boolean = true;
 let total: number = 0;
-let name : string = 'Vishwas';
-
-
-let sentence: string = `My name is ${name}
-I am a beginner in Typescript`;
-
-console.log(sentence);
 
 let n: null = null;
 let u: undefined = undefined;
@@ -40,6 +32,8 @@ randomValue = 'Dimos';
 
 let myVariable: unknown = 10;
 
+
+
 function hasName(obj: any): obj is {name:string}{
     return !!obj &&
     typeof obj === "object" &&
@@ -49,7 +43,7 @@ if(hasName(myVariable)) {
 console.log(myVariable.name);
 }
 
-(myVariable as string).toUpperCase();
+// (myVariable as string).toUpperCase();
 
 let a;
 a=10;
@@ -65,6 +59,27 @@ let anyType: any;
 anyType = 20;
 anyType = true;
 
+function add(num1: number, num2: number = 10): number{
+    if(num2)
+    return num1 + num2;
+    else
+    return num1;
+}
+add(4,10);
+add(4);
 
+interface Person{
+    firstName: string;
+    lastName: string;
+}
+
+function fullName(person: Person){
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+let p = {
+    firstName: 'Dimos',
+    lastName: 'Christidis'
+};
+fullName(p);
 
 
